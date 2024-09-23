@@ -15,7 +15,7 @@ body, html {
 }
 
 /* Staggered delay for each text */
-.fly-in-out:nth-child(1) { /*Project 1*/
+.fly-in-out:nth-child(1) { /*nth meaning object, child meaning object under main component(parent), (n) meaning specific object. sorted as objects are added to parent component*/
     animation-delay: 0s;
     
 }
@@ -28,8 +28,8 @@ body, html {
     animation-delay: 45s; /* Starts after the second text */
 }
 
-@keyframes flyInOut {
-    0%, 100% {
+@keyframes flyInOut { /*animation effect*/
+    0%, 100% { /* percentage on screen */
         transform: translateX(-100%);
         opacity: 0;
     }
