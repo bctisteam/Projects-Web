@@ -10,11 +10,14 @@ body, html {
     position: absolute; /* Allows each text to be placed independently */
     animation: flyInOut 60s ease-in-out infinite;
     opacity: 0; /* Initially hidden */
+    display: flex;
+    align-items: center;
 }
 
 /* Staggered delay for each text */
-.fly-in-out:nth-child(1) {
+.fly-in-out:nth-child(1) { /*nth meaning object, child meaning object under main component(parent), (n) meaning specific object. sorted as objects are added to parent component*/
     animation-delay: 0s;
+    
 }
 
 .fly-in-out:nth-child(2) {
@@ -25,8 +28,8 @@ body, html {
     animation-delay: 45s; /* Starts after the second text */
 }
 
-@keyframes flyInOut {
-    0%, 100% {
+@keyframes flyInOut { /*animation effect*/
+    0%, 100% { /* percentage on screen */
         transform: translateX(-100%);
         opacity: 0;
     }
@@ -50,6 +53,23 @@ body, html {
     z-index: -1; /* Keeps the video in the background */
 }
 
-.p1{
-    color: rgb(189, 78, 236);
+h1{
+    color: aliceblue;
+    margin-left: auto;
+    text-align: right;
+    transform: rotate(270deg); 
+}
+
+img{
+    border-color: aliceblue;
+    border-radius: 5%;
+    color: aliceblue;
+    margin-left: auto;
+
+}
+
+p{
+    color: aliceblue;
+    text-align: right;
+    margin-left: auto;
 }
