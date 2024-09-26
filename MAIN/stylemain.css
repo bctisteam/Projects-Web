@@ -1,3 +1,15 @@
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+
+header{
+    align-items: center;
+    background-color: black;
+    color: aliceblue;
+}
+
+/* Video background settings */
 .background-video {
     position: absolute;
     top: 0;
