@@ -4,10 +4,23 @@
         <meta charset="UTF-8"> <!-- allowing special and non-english characters into the code-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for proper scaling. compatible with mobile devices -->
         <title>STEAM Projects Display</title> <!-- Name on the tab -->
-        <link rel="stylesheet" href="webteststyle.css"> <!-- linking to the css code for design -->
+        <link rel="stylesheet" href="projstyle.css"> <!-- linking to the css code for design -->
     </head>
     
     <body>
+        <header>
+            <div class="header-left">
+                <img src="left-image.png" alt="Left Image">
+            </div>
+            <div class="header-middle">
+                <h1>Centered Header Text</h1>
+            </div>
+            <div class="header-right">
+                <img src="right-image.png" alt="Right Image">
+            </div>
+        </header>
+
+
         <div class="fly-in-out"> <!-- class is equivilant to a variable -->
             <h1>Project 1</h1> <!-- largest font size for headers. sizes range from 1(largest) to 6(smallest). also pre-bolded. -->
             <img src="puzzlebot.jpg" width="50%" height="50%"> <!-- inserting jpg image and setting size -->
@@ -27,9 +40,17 @@
         </div>
 
         <video class="background-video" autoplay muted loop>
-            <source src="webvid.mp4" type="video/mp4"> <!-- .mp4 video source -->
+            <source src="media/webvid.mp4" type="video/mp4"> <!-- .mp4 video source -->
             <!-- Fallback for browsers that don't support video -->
             Your browser does not support the video tag.
         </video>
+
+        <footer>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Man. Project(WIP)</a></li>
+            </ul>
+        </footer>
+
     </body>
 </html>
