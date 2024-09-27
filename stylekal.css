@@ -18,18 +18,19 @@ h1{
 }
 
 nav{
-    display: flex;
     justify-content: center; 
 }
 
 ul {
     list-style: none;
-    display: flex;
-    gap: 15px;
+    gap: 25px;
+    justify-content: center; 
 }
 
 li {
     display: grid;
+    justify-content: center; 
+    gap: 25px;
 }
 
 a {
