@@ -17,7 +17,34 @@ h1{
     text-align: center;
 }
 
+nav{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; 
+}
 
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: rgb(96, 99, 109);
+    border-radius: 5px;
+}
 
 
 .background-video {
