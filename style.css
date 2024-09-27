@@ -1,0 +1,57 @@
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+
+header{
+    background-color: rgba(36, 36, 36, 0.64);
+    justify-content: center;
+    margin: auto;
+    font-size: 50px;
+    width: 50%;
+    border-radius: 25px;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    justify-content: center; 
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+li {
+    display: grid;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: rgb(96, 99, 109);
+    border-radius: 5px;
+}
+
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1; 
+}
