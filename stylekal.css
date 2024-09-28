@@ -1,13 +1,14 @@
 body, html {
     height: 100%;
     overflow: hidden;
+    text-align: center;
 }
 
 header{
     background-color:rgba(0, 0, 0, 0.445);
     justify-content: space-between;
     margin: auto;
-    font-size: 5vw;
+    font-size: 4vw;
     width: 50vw;
     border-radius: 25px;
 }
@@ -23,12 +24,15 @@ nav{
 }
 
 ul {
-    list-style: none;
-    justify-content: space-between;
-    text-align: center;
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0 auto; /* Center the list horizontally */
+    text-align: center; /* Aligns the list items */
+    
 }
 
 li {
+    text-align: center;
     display: grid;
     gap: 25px;
 }
