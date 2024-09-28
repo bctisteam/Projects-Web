@@ -1,7 +1,5 @@
 body, html {
     height: 100%;
-    justify-content: space-between;
-    align-items: center;
     overflow: hidden;
 }
 
@@ -26,23 +24,20 @@ nav{
 
 ul {
     list-style: none;
-    gap: 25px;
     justify-content: space-between;
     text-align: center;
 }
 
 li {
     display: grid;
-    justify-content: center;
     gap: 25px;
-    text-align: center;
 }
 
 a {
     color: aliceblue;
     text-decoration: none;
     font-size: 4vh;
-    padding: 10px 15px;
+    padding: 10px;
     transition: background-color 0.3s ease;
 }
 
