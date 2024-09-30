@@ -7,71 +7,128 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            display: flex;
-            align-items: flex-start;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrollbars on body */
+        }
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the whole background */
+            z-index: 0; /* Place the video behind the content */
         }
         .container {
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            z-index: 1; /* Ensure content is above video */
+            padding: 20px;
+            color: white; /* Change text color for contrast */
+            height: 100vh; /* Full viewport height */
+            overflow-y: auto; /* Allow vertical scrolling */
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for better readability */
         }
         .button {
             display: flex;
             align-items: center;
-            margin: 10px 0; /* Added some vertical space between buttons */
-            cursor: pointer;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px; 
+            transition: transform 0.3s;
+            width: 100%; 
+            position: relative; 
+            top: 20px; 
+            color: white; /* Text color */
+            text-decoration: none; /* Remove underline from links */
+        }
+        .button:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
         }
         .button img {
-            width: 300px; /* Fixed width */
-            height: 300px; /* Fixed height */
-            object-fit: cover; /* Maintain aspect ratio */
-            margin-right: 5px; /* Space between image and text */
+            width: 300px; /* Adjusted size for better layout */
+            height: 300px; /* Adjusted size for better layout */
+            object-fit: cover; 
+            margin-right: 10px; 
+        }
+        .text-container {
+            margin-left: 20px; /* Space between image and text box */
+            flex-grow: 1; /* Allows the text container to expand */
+            background: rgba(255, 255, 255, 0.2); /* Light background for text */
+            border-radius: 5px;
+            padding: 10px;
+            color: black; /* Text color inside the box */
+            min-width: 200px; /* Minimum width for text box */
+        }
+        .button-row {
+            display: flex;
+            align-items: flex-start; /* Align items at the top */
+            margin-bottom: 10px; /* Space between button rows */
         }
     </style>
 </head>
 <body>
-
-    <div class="container">
+    <video class="background-video" autoplay muted loop>
+        <source src="webvid.mp4" type="video/mp4"> <!-- .mp4 video source -->
+    </video>
+    
+    <div id="page1" class="container" style="display: flex;">
         <h1>Welcome to STEAM TEAM INFORMATION</h1>
-        <p>Click on the photos below to learn more about us!:</p>
+        <p>Click on the photos below to learn more about us!</p>
 
-        <div class="button">
-            <a href="https://www.linkedin.com/in/mikayla-remolacio-205166265/">
+        <div class="button-row">
+            <a href="https://www.linkedin.com/in/mikayla-remolacio-205166265/" class="button">
                 <img src="2H9A0023.JPG" alt="Mikayla">
             </a>
-            <span>Mikayla: allaalalla</span>
+            <div class="text-container">Mikayla: allaalalla</div>
         </div>
         
-        <div class="button">
-            <a href="https://ca.linkedin.com/in/dora-m">
+        <div class="button-row">
+            <a href="https://ca.linkedin.com/in/dora-m" class="button">
                 <img src="IMG_9592.JPG" alt="Dora">
             </a>
-            <span>Dora: lalalallalala</span>
+            <div class="text-container">Dora: lalalallalala</div>
         </div>
 
-        <div class="button">
-            <a href="https://ca.linkedin.com/in/deven-lall-53b5ba32a?trk=people-guest_people_search-card&original_referer=https%3A%2F%2Fwww.linkedin.com%2F">
+        <div class="button-row">
+            <a href="https://ca.linkedin.com/in/deven-lall-53b5ba32a?trk=people-guest_people_search-card&original_referer=https%3A%2F%2Fwww.linkedin.com%2F" class="button">
                 <img src="2H9A0014.JPG" alt="Deven">
             </a>
-            <span>Deven: lalalalalalalal</span>
+            <div class="text-container">Deven: lalalalalalalal</div>
         </div>
 
-        <div class="button">
-            <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADmOc04BEYNRC7QJDRSIX5hVu3kZmaGp_IM&keywords=reyhan%20tressler&origin=RICH_QUERY_SUGGESTION&position=0&searchId=7c1e53ba-fab7-44d0-8129-b3f991c5eccb&sid=amN&spellCorrectionEnabled=false">
+        <div class="button-row">
+            <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADmOc04BEYNRC7QJDRSIX5hVu3kZmaGp_IM&keywords=reyhan%20tressler&origin=RICH_QUERY_SUGGESTION&position=0&searchId=7c1e53ba-fab7-44d0-8129-b3f991c5eccb&sid=amN&spellCorrectionEnabled=false" class="button">
                 <img src="Screenshot_25-9-2024_17525_teams.microsoft.com.jpeg" alt="Reyhan">
             </a>
-            <span>Reyhan: lalalalalalalala</span>
+            <div class="text-container">Reyhan: lalalalalalalala</div>
         </div>
         
-        <div class="button">
-            <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAE0VxfYB0DShHoN7TdELubWOdzkjAxdWSUU&keywords=andrew%20allan&origin=RICH_QUERY_SUGGESTION&position=1&searchId=215ad5f6-686a-42b5-9ace-b688c4c94af7&sid=0U1&spellCorrectionEnabled=false">
+        <div class="button-row">
+            <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAE0VxfYB0DShHoN7TdELubWOdzkjAxdWSUU&keywords=andrew%20allan&origin=RICH_QUERY_SUGGESTION&position=1&searchId=215ad5f6-686a-42b5-9ace-b688c4c94af7&sid=0U1&spellCorrectionEnabled=false" class="button">
                 <img src="787711b2-b248-4eda-9637-b0d12cea9f20.jpg" alt="Andrew">
             </a>
-            <span>Andrew: lalalalalalalallalal</span>
+            <div class="text-container">Andrew: lalalalalalalallalal</div>
         </div>
+
+        <button onclick="showPage(2)" style="color: white; margin-top: 20px;">Go to Second Page</button>
     </div>
 
+    <div id="page2" class="container" style="display: none;">
+        <h1>Welcome to the Second Page</h1>
+        <p>Content for the second page goes here!</p>
+        
+        <button onclick="showPage(1)" style="color: white; margin-top: 20px;">Go Back to First Page</button>
+    </div>
+
+    <script>
+        function showPage(pageNumber) {
+            document.getElementById('page1').style.display = (pageNumber === 1) ? 'flex' : 'none';
+            document.getElementById('page2').style.display = (pageNumber === 2) ? 'flex' : 'none';
+        }
+    </script>
 </body>
 </html>
