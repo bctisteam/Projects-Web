@@ -111,16 +111,13 @@ p{
 }
 
 header {
-    background-color: rgba(39, 40, 41, 0.459);
-    opacity: 0.8; /* 80% opacity for the whole header */
+    background-color: rgba(36, 36, 36, 0.459);
     color: white;
     text-align: center;
-    width: 100%;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
+    width: 50vw;
     display: flex;
+    margin: auto;
+    justify-content: space-between;
 }
 
 /* Left image */
@@ -144,4 +141,6 @@ header {
 .header-right img {
     height: 50px; /* Adjust size if needed */
     width: auto;
+    font-size: small;
+    color: aliceblue;
 }

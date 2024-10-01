@@ -11,6 +11,31 @@ header{
     font-size: 4vw;
     width: 50vw;
     border-radius: 25px;
+    display: inline-flex;
+}
+
+.header-left img, 
+.header-right img {
+    height: 50px; /* Adjust the size of the images */
+    width: auto;
+}
+
+/* Middle text */
+.header-middle {
+    text-align: center;
+    flex-grow: 1; /* Allows the middle section to grow */
+}
+
+.header-middle h1 {
+    font-size: 4vw;
+}
+
+/* Right image */
+.header-right{
+    height: 50px; /* Adjust size if needed */
+    width: auto;
+    font-size: small;
+    color: aliceblue;
 }
 
 h1{
