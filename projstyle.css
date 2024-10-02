@@ -1,4 +1,7 @@
 body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -6,30 +9,30 @@ body, html {
     overflow: hidden;
 }
 
+/* Flex Container for fly-in elements */
 .fly-in-out {
-    position: absolute; /* Allows each text to be placed independently */
+    position: absolute;
     animation: flyInOut 60s ease-in-out infinite;
-    opacity: 0; /* Initially hidden */
+    opacity: 0;
     display: flex;
     align-items: center;
 }
 
 /* Staggered delay for each text */
-.fly-in-out:nth-child(1) { /*nth meaning object, child meaning object under main component(parent), (n) meaning specific object. sorted as objects are added to parent component*/
+.fly-in-out:nth-child(1) {
     animation-delay: 0s;
-    
 }
 
 .fly-in-out:nth-child(2) {
-    animation-delay: 25s; /* Starts after the first text */
+    animation-delay: 25s;
 }
 
 .fly-in-out:nth-child(3) {
-    animation-delay: 45s; /* Starts after the second text */
+    animation-delay: 45s;
 }
 
-@keyframes flyInOut { /*animation effect*/
-    0%, 100% { /* percentage on screen */
+@keyframes flyInOut {
+    0%, 100% {
         transform: translateX(-100%);
         opacity: 0;
     }
@@ -43,6 +46,7 @@ body, html {
     }
 }
 
+/* Footer Styling */
 footer {
     background-color: rgba(39, 40, 41, 0.459); /* Dark background */
     color: white;
@@ -68,7 +72,7 @@ li {
 a {
     color: aliceblue;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 5vw; /* Relative font-size for responsiveness */
     padding: 5px 10px;
     transition: background-color 0.8s ease;
 }
@@ -79,27 +83,32 @@ a:hover {
     text-decoration: underline;
 }
 
-.fly-in-out > h1{
+/* Responsive text and image elements */
+.fly-in-out > h1 {
     color: aliceblue;
     margin-left: auto;
     text-align: right;
     transform: rotate(270deg); 
+    font-size: 6vw; /* Responsive font size */
 }
 
-.fly-in-out > img{
+.fly-in-out > img {
     border-color: aliceblue;
     border-radius: 5%;
     color: aliceblue;
     margin-left: auto;
-
+    max-width: 80%; /* Ensure images are responsive */
+    height: auto;
 }
 
-p{
+p {
     color: aliceblue;
     text-align: right;
     margin-left: auto;
+    font-size: 4vw; /* Responsive font size */
 }
 
+/* Responsive background video */
 .background-video {
     position: absolute;
     top: 0;
@@ -107,40 +116,59 @@ p{
     width: 100%;
     height: 100%;
     object-fit: cover; 
-    z-index: -1; 
+    z-index: -1;
 }
 
-header {
-    background-color: rgba(36, 36, 36, 0.459);
-    color: white;
-    text-align: center;
-    width: 50vw;
+body {
+    margin-top: 70px; /* Space for the fixed header */
     display: flex;
-    margin: auto;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-/* Left image */
+/* Header Styling */
+header {
+    background-color: rgba(39, 40, 41, 0.459); /* Dark background */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* Adjust image sizes in header */
 .header-left img, 
-.header-right img {
-    height: 50px; /* Adjust the size of the images */
+.header-right img{
+    height: 70px; /* Responsive height */
     width: auto;
+    margin-left: 3vw;
+}
+
+.header-right p{
+    font-size: medium;
+    margin-right: 4vw;
 }
 
 /* Middle text */
 .header-middle {
     text-align: center;
-    flex-grow: 1; /* Allows the middle section to grow */
+    flex-grow: 1;
 }
 
 .header-middle h1 {
-    font-size: 24px;
+    font-size: 5vw; /* Responsive font-size */
 }
 
-/* Right image */
-.header-right img {
-    height: 50px; /* Adjust size if needed */
-    width: auto;
-    font-size: small;
-    color: aliceblue;
+
+h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    justify-content: space-between;
 }
+
