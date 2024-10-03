@@ -16,6 +16,7 @@ body, html {
     opacity: 0;
     display: flex;
     align-items: center;
+    z-index: 5;
 }
 
 /* Staggered delay for each text */
@@ -60,19 +61,19 @@ footer {
     left: 0;
 }
 
-ul {
+footer ul {
     list-style: none;
     display: flex;
 }
 
-li {
+footer li {
     display: grid;
 }
 
 a {
     color: aliceblue;
     text-decoration: none;
-    font-size: 5vw; /* Relative font-size for responsiveness */
+    font-size: 3vw; /* Relative font-size for responsiveness */
     padding: 5px 10px;
     transition: background-color 0.8s ease;
 }
@@ -87,9 +88,9 @@ a:hover {
 .fly-in-out > h1 {
     color: aliceblue;
     margin-left: auto;
-    text-align: right;
+    text-align: center;
     transform: rotate(270deg); 
-    font-size: 6vw; /* Responsive font size */
+    font-size: 4vw; /* Responsive font size */
 }
 
 .fly-in-out > img {
@@ -99,13 +100,6 @@ a:hover {
     margin-left: auto;
     max-width: 80%; /* Ensure images are responsive */
     height: auto;
-}
-
-p {
-    color: aliceblue;
-    text-align: right;
-    margin-left: auto;
-    font-size: 4vw; /* Responsive font size */
 }
 
 /* Responsive background video */
@@ -120,7 +114,7 @@ p {
 }
 
 body {
-    margin-top: 70px; /* Space for the fixed header */
+    margin-top: 60px; /* Space for the fixed header */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,11 +137,18 @@ header {
 }
 
 /* Adjust image sizes in header */
-.header-left img, 
+.header-left img{
+    height: 50px; /* Responsive height */
+    width: auto;
+    margin-left: 2vw;
+    background-color: rgba(124, 124, 124, 0.404);
+    border-radius: 10px;
+}
+
 .header-right img{
     height: 70px; /* Responsive height */
     width: auto;
-    margin-left: 3vw;
+    margin-left: 4vw;
 }
 
 .header-right p{
@@ -170,5 +171,41 @@ h1{
     color: rgb(255, 255, 255);
     text-align: center;
     justify-content: space-between;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h2{
+    color: rgb(255, 255, 255);
+    margin-left: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: rotate(270deg); 
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    color: rgb(255, 255, 255);
+    padding: 5px 0;
+    text-align: left;
+    margin: 10px;
+    font-size: 1vw; /* Responsive font size */
+}
+.team-member {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    
 }
 
