@@ -4,38 +4,48 @@ body, html {
     text-align: center;
 }
 
-header{
-    background-color:rgba(0, 0, 0, 0.445);
+/* Header Styling */
+header {
+    background-color: rgba(39, 40, 41, 0.459); /* Dark background */
+    color: white;
+    display: flex;
     justify-content: space-between;
-    margin: auto;
-    font-size: 4vw;
-    width: 50vw;
-    border-radius: 25px;
-    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-.header-left img, 
-.header-right img {
-    height: 50px; /* Adjust the size of the images */
+/* Adjust image sizes in header */
+.header-left img{
+    height: 50px; /* Responsive height */
     width: auto;
+    margin-left: 2vw;
+    background-color: rgba(124, 124, 124, 0.404);
+    border-radius: 10px;
+}
+
+.header-right img{
+    height: 70px; /* Responsive height */
+    width: auto;
+    margin-left: 4vw;
+}
+
+.header-right p{
+    font-size: medium;
+    margin-right: 4vw;
 }
 
 /* Middle text */
 .header-middle {
     text-align: center;
-    flex-grow: 1; /* Allows the middle section to grow */
+    flex-grow: 1;
 }
 
 .header-middle h1 {
-    font-size: 4vw;
-}
-
-/* Right image */
-.header-right{
-    height: 50px; /* Adjust size if needed */
-    width: auto;
-    font-size: small;
-    color: aliceblue;
+    font-size: 5vw; /* Responsive font-size */
 }
 
 h1{
@@ -46,6 +56,7 @@ h1{
 
 nav{
     justify-content: space-between;
+    margin-top: 15%;
 }
 
 ul {
